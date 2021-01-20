@@ -443,11 +443,6 @@ input.inputErrorValidation {
 .clearfix {
   display: block;
 }
-
-
-
-
-
 .custom_body {
   background-color: #fff;
   font-family: "Futura PT Book", -apple-system, BlinkMacSystemFont, segoe ui,
@@ -469,7 +464,7 @@ select {
   background: #fff;
   padding: 0;
 }
-.custom_input input:not([type="hidden"]),
+.custom_customerDetails input:not([type="hidden"]),
 select {
   padding: 5px 8px;
   width: 100%;
@@ -478,19 +473,24 @@ select {
   font-size: 15px;
   font-weight: 400;
 }
-.custom_input {
+.custom_customerDetails input[type="text"]{
   display: flex;
   flex-direction: column;
 }
-.custom_input:not(#xyz) {
+.custom_customerDetails form tr{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.custom_customerDetails input[type="text"] {
   margin-bottom: 4px;
 }
-.custom_input input:not([type="hidden"]) {
+.custom_customerDetails input:not([type="hidden"]), .custom_customerDetails input[type="text"] {
   display: block;
   border: 0;
   border-bottom: 2px solid #000;
 }
-.custom_input input:not([type="hidden"]):focus {
+.custom_customerDetails input:not([type="hidden"]):focus {
   outline: 0;
 }
 select {
@@ -517,7 +517,7 @@ select:hover {
   flex-direction: column;
   margin-bottom: 20px;
 }
-.custom_paymentButtons input.custom_submitButton , .custom_paymentButtons .cancel{
+.custom_customerDetails input[type="submit"] , .custom_customerDetails #cancelButton{
   display: inline-block;
   position: relative;
   transition: 0.3s;
@@ -538,7 +538,7 @@ select:hover {
   font-weight: 600;
       width: 100%;
 }
-.custom_paymentButtons input.custom_submitButton::after {
+.custom_customerDetails input[type="submit"]::after {
   position: absolute;
   top: 0;
   right: 100%;
@@ -554,33 +554,33 @@ select:hover {
   -webkit-transform-origin: top left;
   transform-origin: top left;
 }
-.custom_paymentButtons input.custom_submitButton:focus,
-.custom_paymentButtons input.custom_submitButton:hover {
+.custom_customerDetails input[type="submit"]:focus,
+.custom_customerDetails input[type="submit"]:hover {
   background: 0 0;
   color: #fff;
   background-color: #000;
 }
-.custom_paymentButtons input.custom_submitButton:focus:after,
-.custom_paymentButtons input.custom_submitButton:hover:after {
+.custom_customerDetails input[type="submit"]:focus:after,
+.custom_customerDetails input[type="submit"]:hover:after {
   right: 0;
   -webkit-transform: skew(-32deg);
   transform: skew(-32deg);
   -webkit-transform-origin: bottom right;
   transform-origin: bottom right;
 }
-.custom_paymentButtons input.custom_submitButton:active {
+.custom_customerDetails input[type="submit"]:active {
   border-color: #4a4a4a;
   color: #4a4a4a;
 }
-.custom_paymentButtons .cancel{
+.custom_customerDetails #cancelButton{
   background: #000;
   color:#fff;
 }
-.custom_paymentButtons .cancel:hover,.custom_paymentButtons .cancel:focus{
+.custom_customerDetails #cancelButton:hover,.custom_customerDetails #cancelButton:focus{
   background: #fff;
   color:#000;
 }
-.custom_labelColumn a{
+.custom_customerDetails a{
   color : #000;
   text-decoration: underline;
 }
@@ -615,6 +615,21 @@ select:hover {
   background-repeat: no-repeat;
   background-size: 196px 50px;
   padding-top: 60px;
+}
+.custom_customerDetails label{
+  padding: 5px 8px;
+}
+.custom_customerDetails tr{
+  margin-bottom : 25px;
+}
+.custom_customerDetails select{
+  margin-bottom: 5px;
+}
+.custom_customerDetails label select{
+ margin-left: -8px;
+}
+.custom_customerDetails input:submit{
+
 }
 
 @import url("https://p.typekit.net/p.css?s=1&k=lzn0tmz&ht=tk&f=10884.10886.15586&a=52150303&app=typekit&e=css");
